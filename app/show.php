@@ -3,7 +3,7 @@
 // To show the logos on the front end
 
 function show_logos( $atts ){
-    
+
     // Get carousel 'type'
 
     $a = shortcode_atts( array (
@@ -23,7 +23,7 @@ function show_logos( $atts ){
 
         );
 
-    else: 
+    else:
 
         $args = array(
 
@@ -38,17 +38,17 @@ function show_logos( $atts ){
 
     // The Loop
     if ( $query->have_posts() ):
-    
+
     echo '<div class="owl-carousel logo-carousel">';
-    
+
         while ( $query->have_posts() ):
 
             $query->the_post();
 
             $url = get_the_post_thumbnail_url('', 'large');
-            
+
             $content = '<div class="item">';
-            
+
             $content .= '<img src="'. $url .'" class="img-responsive" />';
 
             $content .= '</div>';
@@ -56,11 +56,9 @@ function show_logos( $atts ){
             echo $content;
 
         endwhile;
-    
+
     echo '</div>';
 
-    else: 
-        echo 'no';
     endif;
 
     return $title;
