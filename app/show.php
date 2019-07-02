@@ -20,6 +20,7 @@ function show_logos( $atts ){
 
             'post_type'         =>      array( 'im_logo' ),
             'logo_carousel'     =>      $type,
+            'orderby'           =>      'menu_order'
 
         );
 
@@ -28,6 +29,7 @@ function show_logos( $atts ){
         $args = array(
 
             'post_type'         =>      array( 'im_logo' ),
+            'orderby'           =>      'menu_order'
 
         );
 
