@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Create post type
 
@@ -35,7 +35,7 @@ function cptui_register_my_cpts_im_logo() {
         "hierarchical" => false,
         "rewrite" => array( "slug" => "im_logo", "with_front" => true ),
         "query_var" => true,
-        "menu_position" => 5,
+        "menu_position" => 20,
         "menu_icon" => "dashicons-slides",
         "supports" => array( "title", "thumbnail" ),
     );
@@ -82,7 +82,7 @@ function cptui_register_my_taxes_logo_carousel() {
         "show_admin_column" => false,
         "show_in_rest" => false,
         "rest_base" => "logo_carousel",
-        "show_in_quick_edit" => false,
+        "show_in_quick_edit" => true,
     );
     register_taxonomy( "logo_carousel", array( "im_logo" ), $args );
 }

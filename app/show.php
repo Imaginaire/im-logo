@@ -41,7 +41,7 @@ function show_logos( $atts ){
     // The Loop
     if ( $query->have_posts() ):
 
-    echo '<div class="owl-carousel logo-carousel">';
+    $content = '<div class="owl-carousel logo-carousel">';
 
         while ( $query->have_posts() ):
 
@@ -49,21 +49,19 @@ function show_logos( $atts ){
 
             $url = get_the_post_thumbnail_url('', 'large');
 
-            $content = '<div class="item">';
+            $content .= '<div class="item">';
 
             $content .= '<img src="'. $url .'" class="img-responsive" />';
 
             $content .= '</div>';
 
-            echo $content;
-
         endwhile;
 
-    echo '</div>';
+    $content .= '</div>';
 
     endif;
 
-    return $title;
+    return $content;
 
     // Restore original Post Data
     wp_reset_postdata();
