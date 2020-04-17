@@ -1,0 +1,16 @@
+{
+  "name": "Imaginaire/im-logo",
+  "description": "",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "https://github.com/Imaginaire/im-cpt",
+  "authors": [
+    {
+      "name": "Seb Dean",
+      "homepage": "https://www.imaginaire.co.uk"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.6"
+  }
+}

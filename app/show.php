@@ -41,7 +41,7 @@ function show_logos( $atts ){
     // The Loop
     if ( $query->have_posts() ):
 
-    $content = '<div class="owl-carousel logo-carousel">';
+    $content = '<div class="logo-carousel">';
 
         while ( $query->have_posts() ):
 
